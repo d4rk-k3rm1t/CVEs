@@ -1,0 +1,39 @@
+CVE Submission Request
+
+Author: Charles Heidbreder
+Software: Rediker Software
+Image Version: 6.1.91.00 
+Patch Level: n/a
+Vulnerability: DOM Based XSS. & Refelected XSS
+
+Description: The Rediker Softwaret software is vulnerable to both DOM Based XSS and Reflected XSS attack. A DOM Based XSS attack is when a user sends an executed payload to the host and as a result, it modifies the DOM environment in the victim's browser from the original client-side script. This attack was found through manually searching burp requests, running tested parameters through a XSS finder tool called Dalfox (https://github.com/hahwul/dalfox), then verifying the DOM of the affected host to view the behavior of the application.
+
+Impact: An attacker can insert malicious code within the application DOM. This code can be executed causing the application to run client code unexpectedly. For testing purposes, the impact showed a payload consisting of a basic alert being called within the DOM inspection from the “onload” JavaScript functions. Then after sending the payload, the tester could see within the DOM itself the break of the “value” html value and then the JavaScript function itself. Additionally, an attacker could upload a reflected XSS payload inot the search paramter and pull information from teh webiste via the reflected payload. 
+
+Recommendation: To prevent XSS, you must sanitize all untrusted data, even if it is only used in client-side scripts. If you must use user input on your page, always use it in the text context, never as HTML tags or any other potential code. If you can, entirely avoid using user input, especially if it affects DOM elements.
+
+Reproduction steps:
+
+![Figure 1-Hosted Page of Rediker Software](https://user-images.githubusercontent.com/105435056/215164614-5878b393-1895-4e91-801a-a4b7df741cd5.png)
+
+
+![Figure 2 Dummy Test for Intercepted Parameter](https://user-images.githubusercontent.com/105435056/215164681-eddcdf80-f7c0-4843-a2e0-88c4fad96308.png)
+
+
+![Figure 3 Intercepeted Burpe Request with Dummy Parameter](https://user-images.githubusercontent.com/105435056/215164732-aa1c42a2-e008-41bb-b72b-83413a043bb2.png)
+
+
+![Figure 4 Running XXS Finder tool called Dalfox](https://user-images.githubusercontent.com/105435056/215164772-e08acac4-f5bb-4681-91e4-75485a18b92c.png)
+
+
+
+![Figure 5 Proof of Manupatlion DOM with Malciicoud Payload Injected into HTML  onload=prompt vavle](https://user-images.githubusercontent.com/105435056/215164798-022f36cc-25ba-4136-8518-232ca853e08a.png)
+
+Below is the reproduction of the reflected XSS.
+
+
+![Figure 6 Reflected XSS](https://user-images.githubusercontent.com/105435056/215185241-e3f2c99e-0f4c-452a-b598-4775ed300425.png)
+
+
+
+
