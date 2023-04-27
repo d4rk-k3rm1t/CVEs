@@ -2,7 +2,7 @@ CVE Submission Request
 
 Author: Charles Heidbreder
 Software: Rediker Software
-Image Version: 6.1.91.00 
+Image Version: 6.1 
 Patch Level: n/a
 Vulnerability: DOM Based XSS. & Refelected XSS
 
