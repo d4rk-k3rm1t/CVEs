@@ -16,7 +16,8 @@ Reproduction steps:
 
 ![DOM-XSS](https://github.com/HeidiSecurities/CVEs/assets/105435056/60ce1781-1ee6-4767-b3f4-c70f5613429f)
 
-![Request](https://github.com/HeidiSecurities/CVEs/assets/105435056/6335a27e-7d2d-46f9-9311-b85492616ef5)
+![Request](https://github.com/HeidiSecurities/CVEs/assets/105435056/b3efc211-a95c-47b5-adde-6068debb2d90)
 
+![Response](https://github.com/HeidiSecurities/CVEs/assets/105435056/9fb695f6-baff-4ca5-8532-02fc64b63a77)
 
-
+![DOM_Collaborator](https://github.com/HeidiSecurities/CVEs/assets/105435056/39b0b8bf-aa5e-44c1-bf80-2367efd4da97)
